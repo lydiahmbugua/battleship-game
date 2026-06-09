@@ -13,7 +13,6 @@ A browser-based Battleship game built with vanilla JavaScript, HTML, and CSS. Pl
 - Random ship placement with redo option
 - Computer opponent with randomized attacks
 - Real-time stats tracking — hits, misses, ships sunk, and ships remaining
-- Fleet tracker showing damage state of each enemy ship
 - Win and lose detection with game over screen
 - How to Play guide accessible at any time
 - New Game button to reset and start fresh
@@ -101,7 +100,7 @@ The following features are currently in development:
 ### Dark Mode
 A toggleable dark theme that switches the colour palette to deeper purples and blacks, reducing eye strain during extended play sessions. The current light lavender and pink design system will be preserved as the default.
 
-### 2 Player Mode
+### Two Player Mode
 A local two-player mode where two people can play on the same device. Each player places their ships privately, then passes the device to their opponent to take turns attacking. The screen will be hidden between turns to prevent peeking at the opponent's board.
 
 ### Smart Computer Attacks
