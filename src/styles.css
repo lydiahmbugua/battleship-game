@@ -1,5 +1,7 @@
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -23,18 +25,31 @@ body {
 }
 
 /* 6. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 7. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 8. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -42,13 +57,257 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 /*
   10. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
+}
+
+:root {
+  --water: #eae6ff;
+  --ship: #534ab7;
+  --hit: #d4537e;
+  --miss: #afa9ec;
+  --sunk: #3c3489;
+  --background: #fdf8ff;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.dm-sans {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.dm-mono-medium {
+  font-family: "DM Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+body {
+  width: 100%;
+}
+.nav {
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.how-to {
+  border: 5px solid rgba(127, 119, 221, 0.2);
+  padding: 20px;
+  border-radius: 24px;
+  width: 700px;
+  margin: auto;
+  background-color: var(--background);
+}
+.how-title {
+  text-align: center;
+}
+.logo,
+.how-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #26215c;
+  font-family: "Playfair Display";
+}
+.heading {
+  font-size: 20px;
+  font-family: "DM Mono";
+  color: #534ab7;
+}
+.para {
+  font-family: "DM Sans";
+  font-size: 12px;
+  font-weight: 400;
+  color: #26215c;
+}
+.logo-badge {
+  font-family: "DM Sans";
+  font-size: 15px;
+  font-weight: 400;
+  padding: 8px;
+  border-radius: 60px;
+  display: flex;
+  gap: 8px;
+}
+.stats-bar {
+  display: flex;
+  gap: 20px;
+  margin: 30px 100px;
+}
+.stat {
+  border: 1px solid rgba(127, 119, 221, 0.2);
+  padding: 12px;
+  flex: 1;
+  text-align: center;
+  border-radius: 24px;
+}
+.number {
+  font-family: "Playfair Display";
+  font-size: 30px;
+  color: #534ab7;
+}
+.word {
+  font-family: "DM Sans";
+  font-size: 11px;
+  font-weight: 500px;
+  min-width: 85px;
+}
+.boards {
+  display: flex;
+  margin: 40px 100px;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.grid {
+  gap: 3px;
+  border-radius: 24px;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  padding: 20px;
+  border: 1px solid rgba(127, 119, 221, 0.2);
+  padding-right: 32px;
+  padding-bottom: 32px;
+  flex: 1;
+}
+.square {
+  width: 24px;
+  height: 24px;
+  background-color: var(--water);
+  border: 1px solid rgba(127, 119, 221, 0.2);
+}
+.coordinate {
+  display: flex;
+  font-family: "DM Mono";
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #534ab7;
+}
+.title {
+  font-family: "DM Mono";
+  text-align: center;
+  color: #534ab7;
+}
+.footer {
+  display: flex;
+  gap: 200px;
+  margin: 50px;
+}
+.ships {
+  flex-direction: column;
+  border: 1px solid rgba(127, 119, 221, 0.2);
+  padding: 20px;
+  border-radius: 24px;
+  font-family: "DM Sans";
+  font-size: 15px;
+  font-weight: 400;
+  gap: 8px;
+  margin: auto;
+}
+.buttons {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  border-radius: 24px;
+  gap: 12px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  border: 1px solid rgba(127, 119, 221, 0.2);
+  width: 200px;
+  padding: 8px;
+  gap: 4px;
+  background-color: var(--background);
+  border-radius: 24px;
+  font-family: "DM Sans";
+  color: #534ab7;
+}
+.button:hover {
+  background-color: #26215c;
+  color: var(--background);
+}
+.boat {
+  display: flex;
+  gap: 2px;
+}
+.endgame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid rgba(127, 119, 221, 0.2);
+  padding: 20px;
+  border-radius: 24px;
+  width: 700px;
+  margin: auto;
+  background-color: var(--background);
+  gap: 20px;
+}
+.buttons-box {
+  display: flex;
+  gap: 8px;
+}
+.cell {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(127, 119, 221, 0.2);
+  background-color: var(--ship);
+  border-radius: 4px;
+}
+.end-para {
+  font-family: "DM Sans";
+  font-size: medium;
+}
+.active {
+  background-color: var(--sunk);
+  color: var(--background);
+}
+.ship-box {
+  background-color: var(--ship);
+}
+.miss {
+  background-color: var(--miss);
+}
+.hit {
+  background-color: var(--hit);
+}
+.sunk {
+  background-color: var(--sunk);
+}
+.hidden {
+  display: none;
 }

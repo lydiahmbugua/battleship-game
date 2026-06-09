@@ -1,34 +1,43 @@
 {
-  "name": "to-do-list",
+  "name": "battleship",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js",
     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lydiahmbugua/to-do-list.git"
+    "url": "git+https://github.com/lydiahmbugua/battleship-game.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/lydiahmbugua/to-do-list/issues"
+    "url": "https://github.com/lydiahmbugua/battleship-game/issues"
   },
-  "homepage": "https://github.com/lydiahmbugua/to-do-list#readme",
+  "homepage": "https://github.com/lydiahmbugua/battleship-game#readme",
   "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "babel-jest": "^30.4.1",
     "css-loader": "^7.1.4",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.7",
+    "jest": "^30.4.2",
     "style-loader": "^4.0.0",
     "webpack": "^5.106.2",
     "webpack-cli": "^7.0.2",
     "webpack-dev-server": "^5.2.3",
     "webpack-merge": "^6.0.1"
+  },
+  "jest": {
+  "transform": {
+    "^.+\\.js$": "babel-jest"
   }
+}
 }
