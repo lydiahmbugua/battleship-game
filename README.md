@@ -4,7 +4,7 @@ A browser-based Battleship game built with vanilla JavaScript, HTML, and CSS. Pl
 
 ## Live Demo
 
-[Play Battleship](#) <!-- replace with your deployed URL -->
+[Play Battleship](https://lydiahmbugua.github.io/battleship-game/) <!-- replace with your deployed URL -->
 
 ## Features
 
